@@ -54,14 +54,14 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   fonts:
+    - family: League
+      fonts:
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Medium.ttf
+          weight: 400
+        - asset: assets/fonts/LeagueSpartan/LeagueSpartan-Light.ttf
+          weight: 300
     - family: Poppins
       fonts:
-        - asset: assets/fonts/Poppins/Poppins-Thin.ttf
-          weight: 100
-        - asset: assets/fonts/Poppins/Poppins-ThinItalic.ttf
-          weight: 100
-          style: italic
-
         - asset: assets/fonts/Poppins/Poppins-ExtraLight.ttf
           weight: 200
         - asset: assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf
@@ -112,6 +112,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/Categories/
+    - assets/images/RecipesByCategories/Breakfast/
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
