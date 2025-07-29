@@ -10,4 +10,5 @@ class AppImage {
       'assets/images/RecipesByCategories/Breakfast/oatmeal_and_nut.png';
   static final oatmealGranola =
       'assets/images/RecipesByCategories/Breakfast/oatmeal_granola.png';
+  static final account = 'assets/images/image.png';
 }

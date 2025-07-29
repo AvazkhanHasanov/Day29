@@ -15,10 +15,16 @@ class AppStyles {
     fontFamily: "Poppins",
     color: AppColors.textColor,
   );
-  static final subtext = TextStyle(
+  static final subtextPink = TextStyle(
     fontSize: 12,
     fontWeight: FontWeight.w400,
     color: AppColors.pinkSubC,
+    fontFamily: 'Poppins',
+  );
+  static final subtextOq = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    color: AppColors.whiteBeige,
     fontFamily: 'Poppins',
   );
   static final miniText2 = TextStyle(

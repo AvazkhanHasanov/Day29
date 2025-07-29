@@ -1,3 +1,5 @@
+import 'package:day_29_vazifa/feature/BottomNavigationPage/Pages/BottomNavigationHome.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/detailPage/breakfastDetailPage.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/pages/categoriesBreakfastPage.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/pages/categories_page.dart';
 import 'package:flutter/material.dart';
@@ -17,9 +19,8 @@ class Day29App extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return MaterialApp(
-
-            debugShowCheckedModeBanner: false,
-            home: Breakfast()
+          debugShowCheckedModeBanner: false,
+          home: Breakfast(),
         );
       },
     );

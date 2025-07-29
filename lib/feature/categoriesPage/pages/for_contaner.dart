@@ -41,7 +41,7 @@ class _ForContainerState extends State<ForContainer> {
             border: BoxBorder.all(color: AppColors.pinkSubC, width: 1.w),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,13 +61,13 @@ class _ForContainerState extends State<ForContainer> {
                 Row(
                   spacing: 5,
                   children: [
-                    Text('${widget.star}', style: AppStyles.subtext),
+                    Text('${widget.star}', style: AppStyles.subtextPink),
                     SvgPicture.asset(AppIcons.star),
                     Spacer(),
                     SvgPicture.asset(AppIcons.clock),
                     Text(
                       '${widget.minute}min',
-                      style: AppStyles.subtext,
+                      style: AppStyles.subtextPink,
                     ),
                   ],
                 ),
