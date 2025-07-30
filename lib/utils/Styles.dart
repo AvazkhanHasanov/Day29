@@ -13,18 +13,23 @@ class AppStyles {
     fontSize: 14.61.sp,
     fontWeight: FontWeight.w500,
     fontFamily: "Poppins",
-    color: AppColors.textColor,
+    color: AppColors.brownF9,
   );
   static final subtextPink = TextStyle(
-    fontSize: 12,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     color: AppColors.pinkSubC,
     fontFamily: 'Poppins',
+  );  static final subtextRedPink = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.redPinkMain,
+    fontFamily: 'Poppins',
   );
   static final subtextOq = TextStyle(
-    fontSize: 12,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w400,
-    color: AppColors.whiteBeige,
+    color: AppColors.brownF9,
     fontFamily: 'Poppins',
   );
   static final miniText2 = TextStyle(
@@ -39,5 +44,28 @@ class AppStyles {
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',
     color: AppColors.color3E,
+  );  static final description = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    color: AppColors.brownF9,
   );
+  static final paragraph= TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w300,
+    fontFamily: 'League',
+    color: AppColors.brownF9,
+  );
+  static final subtitle= TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: AppColors.pinkSubC,
+  );  static final titlle= TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    fontFamily: 'Poppins',
+    color: AppColors.redPinkMain,
+  );
+
 }

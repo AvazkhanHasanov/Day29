@@ -7,8 +7,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class AppBarWithBottom extends StatefulWidget implements PreferredSizeWidget {
-  const AppBarWithBottom({super.key});
-
+  const AppBarWithBottom({super.key, required this.title});
+final String title;
   @override
   Size get preferredSize => Size(double.infinity, 133.h);
 
@@ -46,7 +46,7 @@ class _AppBarWithBottomState extends State<AppBarWithBottom> {
         ),
       ),
       centerTitle: true,
-      title: Text("Breakfast", style: AppStyles.appBarText),
+      title: Text(widget.title, style: AppStyles.appBarText),
       actions: [
         IconButton(
           onPressed: () {},

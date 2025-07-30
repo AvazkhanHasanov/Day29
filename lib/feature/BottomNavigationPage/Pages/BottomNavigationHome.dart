@@ -65,7 +65,7 @@ class _BottomNavigationHomeState extends State<BottomNavigationHome> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 12,
                                   fontFamily: 'Poppins',
-                                  color: AppColors.whiteBeige,
+                                  color: AppColors.brownF9,
                                 ),
                               ),
                               Text(
@@ -74,7 +74,7 @@ class _BottomNavigationHomeState extends State<BottomNavigationHome> {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 12,
                                   fontFamily: 'Poppins',
-                                  color: AppColors.whiteBeige,
+                                  color: AppColors.brownF9,
                                 ),
                               ),
                               SizedBox(
@@ -86,7 +86,7 @@ class _BottomNavigationHomeState extends State<BottomNavigationHome> {
                                     fontWeight: FontWeight.w400,
                                     fontSize: 12,
                                     fontFamily: 'Poppins',
-                                    color: AppColors.whiteBeige,
+                                    color: AppColors.brownF9,
                                   ),
                                 ),
                               ),

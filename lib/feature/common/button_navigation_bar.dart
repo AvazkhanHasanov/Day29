@@ -14,10 +14,10 @@ class ButtonNavigationBar extends StatelessWidget {
       width: double.infinity,
       height: 126.h,
       child: Stack(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.center,
         children: [
           bottomGradient(),
-          bottomNavigatiorMain(),
+          BottomNavigatorMain(),
         ],
       ),
     );

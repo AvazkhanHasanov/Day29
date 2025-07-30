@@ -36,7 +36,7 @@ class ImageForDetailPage extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                       fontSize: 20.sp,
                       fontFamily: 'Poppins',
-                      color: AppColors.whiteBeige,
+                      color: AppColors.brownF9,
                     ),
                   ),
                   Spacer(),
@@ -50,7 +50,7 @@ class ImageForDetailPage extends StatelessWidget {
                     icon: SvgPicture.asset(
                       AppIcons.star,
                       colorFilter: ColorFilter.mode(
-                        AppColors.whiteBeige,
+                        AppColors.brownF9,
                         BlendMode.srcIn,
                       ),
                     ),

@@ -17,7 +17,7 @@ class ForContainer extends StatefulWidget {
   });
 
   final String image, text1, text2;
-  final int star, minute;
+  final num star, minute;
 
   @override
   State<ForContainer> createState() => _ForContainerState();
@@ -36,7 +36,7 @@ class _ForContainerState extends State<ForContainer> {
           height: 226.h,
           width: 158.w,
           decoration: BoxDecoration(
-            color: AppColors.whiteBeige,
+            color: AppColors.brownF9,
             borderRadius: BorderRadius.circular(14.r),
             border: BoxBorder.all(color: AppColors.pinkSubC, width: 1.w),
           ),
@@ -77,7 +77,7 @@ class _ForContainerState extends State<ForContainer> {
         ),
         ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(14),
-          child: Image.asset(
+          child: Image.network(
             widget.image,
             width: 169.w,
             height: 153.h,

@@ -20,7 +20,9 @@ class Day29App extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: Breakfast(),
+          home:BreakfastDetailPage(),
+          // Breakfast(),
+          // CategoriesPage(),
         );
       },
     );

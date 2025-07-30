@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class bottomNavigatiorMain extends StatelessWidget {
-  const bottomNavigatiorMain({
+class BottomNavigatorMain extends StatelessWidget {
+  const BottomNavigatorMain({
     super.key,
   });
 
@@ -13,18 +13,18 @@ class bottomNavigatiorMain extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: 34.h),
       child: Container(
+        alignment: Alignment.bottomCenter,
         height: 56.h,
         width: 281.w,
         decoration: BoxDecoration(
           color: AppColors.redPinkMain,
-          borderRadius: BorderRadius.circular(33.r),
+          borderRadius: BorderRadiusGeometry.circular(33.r),
         ),
 
         child: NavigationBar(
           indicatorColor: Colors.transparent,
           backgroundColor: Colors.transparent,
           labelBehavior: NavigationDestinationLabelBehavior.alwaysHide,
-
           destinations: [
             NavigationDestination(
               icon: SvgPicture.asset('assets/icons/home.svg'),
