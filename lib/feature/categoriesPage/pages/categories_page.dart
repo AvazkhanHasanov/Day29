@@ -1,22 +1,15 @@
+import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/widgets/categories_Item.dart';
 import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';
 import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
-import 'package:day_29_vazifa/utils/Colors.dart';
-import 'package:day_29_vazifa/utils/Styles.dart';
-import 'package:dio/dio.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-final dio = Dio(
-  BaseOptions(
-    baseUrl: 'http://192.168.190.88:8888/api/v1',
-    validateStatus: (status) => true,
-  ),
-);
+import 'package:flutter/material.dart';
+import 'package:day_29_vazifa/core/client.dart';
 
 Future<List> fetchCategories() async {
   var response = await dio.get('/categories/list');
   if (response.statusCode != 200) {
-    throw Exception(response.data);
+    throw Exception('Failed to load categories: ${response.statusCode}');
   }
   return response.data;
 }
@@ -55,26 +48,10 @@ class CategoriesPage extends StatelessWidget {
               ),
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-                return SizedBox(
-                  width: 158.54.w,
-                  height: 171.55.h,
-                  child: Column(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(12.r),
-                        child: Image.network(
-                          snapshot.data![index]['image'],
-                          width: 158.54.w,
-                          height: 144.53.h,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      Text(
-                        snapshot.data![index]['title'],
-                        style: AppStyles.gridText,
-                      ),
-                    ],
-                  ),
+                return CategoryItem(
+                  id: snapshot.data![index]['id'],
+                  image: snapshot.data![index]['image'],
+                  title: snapshot.data![index]['title'],
                 );
               },
             ),

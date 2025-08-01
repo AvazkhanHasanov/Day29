@@ -1,6 +1,7 @@
 import 'package:day_29_vazifa/feature/BottomNavigationPage/Pages/BottomNavigationHome.dart';
+import 'package:day_29_vazifa/feature/authentication/LoginPage/Pages/Login.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/detailPage/breakfastDetailPage.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/pages/categoriesBreakfastPage.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/pages/categoriesDetailPage.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/pages/categories_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,9 +21,11 @@ class Day29App extends StatelessWidget {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
-          home:BreakfastDetailPage(),
+          home:
+          // LoginPage(),
+          // BreakfastDetailPage(),
           // Breakfast(),
-          // CategoriesPage(),
+          CategoriesPage(),
         );
       },
     );

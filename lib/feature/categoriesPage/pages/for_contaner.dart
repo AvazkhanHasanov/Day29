@@ -1,23 +1,15 @@
-import 'package:day_29_vazifa/utils/Colors.dart';
-import 'package:day_29_vazifa/utils/Icons.dart';
-import 'package:day_29_vazifa/utils/Images.dart';
-import 'package:day_29_vazifa/utils/Styles.dart';
+import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/Icons.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/widgets/recipe_item_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ForContainer extends StatefulWidget {
   const ForContainer({
-    super.key,
-    required this.image,
-    required this.text1,
-    required this.text2,
-    required this.star,
-    required this.minute,
+    super.key, required this.recipe,
   });
-
-  final String image, text1, text2;
-  final num star, minute;
+  final Map<String, dynamic> recipe;
 
   @override
   State<ForContainer> createState() => _ForContainerState();
@@ -40,52 +32,22 @@ class _ForContainerState extends State<ForContainer> {
             borderRadius: BorderRadius.circular(14.r),
             border: BoxBorder.all(color: AppColors.pinkSubC, width: 1.w),
           ),
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15.w),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  widget.text1,
-                  style: AppStyles.miniText1,
-                  maxLines: 1,
-                  textAlign: TextAlign.start,
-                ),
-                Text(
-                  widget.text2,
-                  style: AppStyles.miniText2,
-                  maxLines: 2,
-                  textAlign: TextAlign.start,
-                ),
-                Row(
-                  spacing: 5,
-                  children: [
-                    Text('${widget.star}', style: AppStyles.subtextPink),
-                    SvgPicture.asset(AppIcons.star),
-                    Spacer(),
-                    SvgPicture.asset(AppIcons.clock),
-                    Text(
-                      '${widget.minute}min',
-                      style: AppStyles.subtextPink,
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
+          child: RecipeItemButton(   title: widget.recipe['title'],
+            description: widget.recipe['description'],
+            rating: widget.recipe['rating'],
+            time: widget.recipe['timeRequired'], ),
         ),
         ClipRRect(
           borderRadius: BorderRadiusGeometry.circular(14),
           child: Image.network(
-            widget.image,
+            widget.recipe['photo'],
             width: 169.w,
             height: 153.h,
             fit: BoxFit.cover,
           ),
         ),
         Positioned(
-          right:  7.w,
+          right: 7.w,
           top: 8.h,
           child: IconButton(
             constraints: BoxConstraints.loose(Size(28, 28)),
@@ -96,8 +58,8 @@ class _ForContainerState extends State<ForContainer> {
             style: IconButton.styleFrom(
               backgroundColor: isSelected
                   ? AppColors.redPinkMain
-                  : AppColors.iconBg,
-              tapTargetSize: MaterialTapTargetSize.shrinkWrap
+                  : AppColors.pinkC9,
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             ),
             icon: SvgPicture.asset(
               AppIcons.heart,

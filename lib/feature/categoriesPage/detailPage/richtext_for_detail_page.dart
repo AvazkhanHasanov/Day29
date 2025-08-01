@@ -1,4 +1,4 @@
-import 'package:day_29_vazifa/utils/Styles.dart';
+import 'package:day_29_vazifa/core/utils/Styles.dart';
 import 'package:flutter/material.dart';
 
 class RichTextForDetailPage extends StatelessWidget {

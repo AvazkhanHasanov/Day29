@@ -1,11 +1,11 @@
+import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/Icons.dart';
+import 'package:day_29_vazifa/core/utils/Images.dart';
+import 'package:day_29_vazifa/core/utils/Styles.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/detailPage/image_for_detail_page.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/detailPage/richtext_for_detail_page.dart';
 import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
 import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';
-import 'package:day_29_vazifa/utils/Colors.dart';
-import 'package:day_29_vazifa/utils/Icons.dart';
-import 'package:day_29_vazifa/utils/Images.dart';
-import 'package:day_29_vazifa/utils/Styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -59,7 +59,7 @@ class BreakfastDetailPage extends StatelessWidget {
           
                     decoration: BoxDecoration(
                       borderRadius: BorderRadiusGeometry.circular(21),
-                      color: AppColors.iconBg,
+                      color: AppColors.pinkC9,
                     ),
                     child: Text(
                       'Following',

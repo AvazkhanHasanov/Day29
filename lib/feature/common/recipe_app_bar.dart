@@ -1,6 +1,6 @@
-import 'package:day_29_vazifa/utils/Colors.dart';
-import 'package:day_29_vazifa/utils/Icons.dart';
-import 'package:day_29_vazifa/utils/Styles.dart';
+import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/Icons.dart';
+import 'package:day_29_vazifa/core/utils/Styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -40,7 +40,7 @@ class RecipeAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {},
           constraints: BoxConstraints.loose(Size(28, 28)),
           style: IconButton.styleFrom(
-            backgroundColor: AppColors.iconBg,
+            backgroundColor: AppColors.pinkC9,
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             fixedSize: Size(28, 28),
             padding: EdgeInsets.zero,
@@ -53,7 +53,7 @@ class RecipeAppBar extends StatelessWidget implements PreferredSizeWidget {
           constraints: BoxConstraints.loose(Size(28, 28)),
           style: IconButton.styleFrom(
             tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-            backgroundColor: AppColors.iconBg,
+            backgroundColor: AppColors.pinkC9,
             padding: EdgeInsets.zero,
             fixedSize: Size(28, 28),
           ),
