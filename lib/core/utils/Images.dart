@@ -1,4 +1,3 @@
-import 'package:day_29_vazifa/feature/categoriesPage/pages/categoriesDetailPage.dart';
 
 class AppImage {
   static final vegan = 'assets/images/Categories/vegan.png';

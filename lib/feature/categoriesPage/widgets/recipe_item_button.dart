@@ -1,7 +1,5 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
 import 'package:day_29_vazifa/core/utils/Icons.dart';
 import 'package:day_29_vazifa/core/utils/Styles.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/pages/for_contaner.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
