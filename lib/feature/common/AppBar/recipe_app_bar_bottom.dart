@@ -1,15 +1,9 @@
 import 'package:day_29_vazifa/feature/BottomNavigationPage/Pages/BottomNavigationHome.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
 import 'package:day_29_vazifa/feature/common/AppBar/Bottom_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-Future<List> fetchCategories() async {
-  var response = await dio.get('/categories/list');
-  if (response.statusCode != 200) {
-    throw Exception('kategoriyalarni olib kelishda xatiolik: ${response.data}');
-  }
-  return response.data;
-}
+import 'package:provider/provider.dart';
 
 class RecipeAppBarBottom extends StatelessWidget
     implements PreferredSizeWidget {
@@ -22,30 +16,32 @@ class RecipeAppBarBottom extends StatelessWidget
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: fetchCategories(),
-      builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          return SingleChildScrollView(
+    return ChangeNotifierProvider(
+      create: (context) => CategoriesViewModel(),
+      builder: (context, child) => Consumer<CategoriesViewModel>(
+        builder: (context, vm, child) => switch (vm.isLoading) {
+          true => Center(
+            child: CircularProgressIndicator(),
+          ),
+          false => SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 39.w, vertical: 7.h),
               child: Row(
                 spacing: 19.w,
                 children: List.generate(
-                  snapshot.data!.length,
+                  vm.categories.length,
                   (index) => BottomItem(
-                    id: snapshot.data![index]['id'],
-                    title: snapshot.data![index]['title'],
-                    isSelected: snapshot.data![index]['id'] == selectedIndex,
+                    id: vm.categories[index]['id'],
+                    title: vm.categories[index]['title'],
+                    isSelected: vm.categories[index]['id'] == selectedIndex,
                   ),
                 ),
               ),
             ),
-          );
-        }
-        return SizedBox.shrink();
-      },
+          ),
+        },
+      ),
     );
   }
 }

@@ -1,18 +1,11 @@
 import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/widgets/categories_Item.dart';
 import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';
 import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
 
 import 'package:flutter/material.dart';
-import 'package:day_29_vazifa/core/client.dart';
-
-Future<List> fetchCategories() async {
-  var response = await dio.get('/categories/list');
-  if (response.statusCode != 200) {
-    throw Exception('Failed to load categories: ${response.statusCode}');
-  }
-  return response.data;
-}
+import 'package:provider/provider.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({
@@ -21,50 +14,30 @@ class CategoriesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: fetchCategories(),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
-            body: Center(
-              child: CircularProgressIndicator(),
+    return ChangeNotifierProvider(
+      create: (context)=> CategoriesViewModel(),
+      child: Consumer<CategoriesViewModel>(
+        builder: (context, vm, child) =>Scaffold(
+          extendBody: true,
+          backgroundColor: AppColors.Bg,
+          appBar: RecipeAppBar(text: "Categories"),
+          body: GridView.builder(
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2,
+              mainAxisSpacing: 10,
             ),
-          );
-        } else if (snapshot.hasError) {
-          return Scaffold(
-            body: Center(
-              child: Text('Error: ${snapshot.error}'),
-            ),
-          );
-        } else if (snapshot.hasData) {
-          return Scaffold(
-            extendBody: true,
-            backgroundColor: AppColors.Bg,
-            appBar: RecipeAppBar(text: "Categories"),
-            body: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 10,
-              ),
-              itemCount: snapshot.data!.length,
-              itemBuilder: (context, index) {
-                return CategoryItem(
-                  id: snapshot.data![index]['id'],
-                  image: snapshot.data![index]['image'],
-                  title: snapshot.data![index]['title'],
-                );
-              },
-            ),
-            bottomNavigationBar: ButtonNavigationBar(),
-          );
-        } else {
-          return Scaffold(
-            body: Center(
-              child: Text('Error !!!${snapshot.error} '),
-            ),
-          );
-        }
-      },
+            itemCount: vm.categories.length,
+            itemBuilder: (context, index) {
+              return CategoryItem(
+                id: vm.categories[index]['id'],
+                image: vm.categories[index]['image'],
+                title: vm.categories[index]['title'],
+              );
+            },
+          ),
+          bottomNavigationBar: ButtonNavigationBar(),
+        ),
+      ),
     );
   }
 }
