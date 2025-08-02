@@ -23,4 +23,8 @@ class AppIcons{
   static final share='assets/icons/share.svg';
   static final starEmpty='assets/icons/star-empty.svg';
   static final starFilled='assets/icons/star-filled.svg';
+  static final facebook='assets/icons/f.svg';
+  static final google='assets/icons/g.svg';
+  static final massager='assets/icons/m.svg';
+  static final instagram ='assets/icons/i.svg';
 }

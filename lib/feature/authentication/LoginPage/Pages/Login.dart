@@ -1,10 +1,11 @@
+import 'package:day_29_vazifa/core/client.dart';
 import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/feature/authentication/LoginPage/Pages/app_bar_login.dart';
 import 'package:day_29_vazifa/feature/authentication/LoginPage/Pages/recipe_login_container.dart';
+import 'package:day_29_vazifa/feature/authentication/LoginPage/Pages/sign_up.dart';
 import 'package:day_29_vazifa/feature/authentication/LoginPage/widgets/text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:day_29_vazifa/core/client.dart';
-
 
 Future<String> login({required String login, required String password}) async {
   var response = await dio.post(
@@ -40,19 +41,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.beige,
-      appBar: AppBar(
-        backgroundColor: AppColors.beige,
-        title: Text(
-          'Login',
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            fontSize: 15,
-            fontFamily: 'Poppins',
-            color: AppColors.brownF9,
-          ),
-        ),
-        centerTitle: true,
-      ),
+      appBar: AppBarLogin(title: 'Login',),
       body: Center(
         child: Column(
           children: [
@@ -121,8 +110,17 @@ class _LoginPageState extends State<LoginPage> {
             ),
             RecipeLoginContainer(
               text: 'Sign Up',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => SignUpPage(),));
+              },
             ),
+            Text('Forgot Password?'),
+            Text('or sign up with'),
+            Row(
+              children: [],
+            ),
+            Text('Don`t have an account? Sign Up'),
           ],
         ),
       ),

@@ -1,3 +1,4 @@
+import 'package:day_29_vazifa/feature/authentication/LoginPage/Pages/Login.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/pages/categories_page.dart';
 import 'package:day_29_vazifa/feature/onBoarding/pages/preference/PreferencePage.dart';
 import 'package:flutter/material.dart';
@@ -20,10 +21,10 @@ class Day29App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home:
             // PreferencePage(),
-          // LoginPage(),
+          LoginPage(),
           // BreakfastDetailPage(),
           // Breakfast(),
-          CategoriesPage(),
+          // CategoriesPage(),
         );
       },
     );
