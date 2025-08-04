@@ -1,7 +1,7 @@
 import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:day_29_vazifa/core/utils/styles.dart';
-import 'package:day_29_vazifa/feature/common/bottom_gradient.dart';
-import 'package:day_29_vazifa/feature/on_boarding/pages/preference/preferences_page.dart';
+import 'package:day_29_vazifa/features/common/bottom_gradient.dart';
+import 'package:day_29_vazifa/features/on_boarding/pages/preference/preferences_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

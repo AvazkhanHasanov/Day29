@@ -1,16 +1,15 @@
 
-import 'package:day_29_vazifa/core/client.dart';
 import 'package:day_29_vazifa/core/utils/colors.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/pages/for_contaner.dart';
-import 'package:day_29_vazifa/feature/common/app_bar/RecipeAppBarMain.dart';
-import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
+import 'package:day_29_vazifa/features/common/app_bar/recipe_app_bar_main.dart';
+import 'package:day_29_vazifa/features/common/button_navigation_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import '../../common/app_bar/recipe_app_bar_bottom.dart';
+import '../managers/categories_view_model.dart';
+import 'for_contaner.dart';
 
 
 

@@ -1,7 +1,8 @@
 import 'package:day_29_vazifa/core/utils/styles.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/pages/categories_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../pages/categories_detail_page.dart';
 
 class CategoryItem extends StatelessWidget {
   const CategoryItem({super.key, required this.id,required this.image, required this.title});

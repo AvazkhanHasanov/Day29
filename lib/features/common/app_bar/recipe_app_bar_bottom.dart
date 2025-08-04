@@ -1,8 +1,9 @@
-import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
-import 'package:day_29_vazifa/feature/common/app_bar/bottom_item.dart';
+import 'package:day_29_vazifa/features/common/app_bar/bottom_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
+import '../../categories_page/managers/categories_view_model.dart';
 
 class RecipeAppBarBottom extends StatelessWidget
     implements PreferredSizeWidget {

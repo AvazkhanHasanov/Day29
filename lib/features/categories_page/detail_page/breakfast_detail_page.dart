@@ -2,13 +2,14 @@ import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:day_29_vazifa/core/utils/icons.dart';
 import 'package:day_29_vazifa/core/utils/images.dart';
 import 'package:day_29_vazifa/core/utils/styles.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/detailPage/image_for_detail_page.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/detailPage/richtext_for_detail_page.dart';
-import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
-import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';
+import 'package:day_29_vazifa/features/categories_page/detail_page/richtext_for_detail_page.dart';
+import 'package:day_29_vazifa/features/common/button_navigation_bar.dart';
+import 'package:day_29_vazifa/features/common/recipe_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import 'image_for_detail_page.dart';
 
 class BreakfastDetailPage extends StatelessWidget {
   const BreakfastDetailPage({super.key});

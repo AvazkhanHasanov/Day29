@@ -1,9 +1,7 @@
-import 'package:day_29_vazifa/feature/authentication/login_page/Pages/Login.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/pages/categories_page.dart';
+import 'package:day_29_vazifa/features/on_boarding/pages/preference/on_boarding_v2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'feature/on_boarding/pages/preference/on_boarding_v2.dart';
 
 void main() {
   runApp(Day29App());

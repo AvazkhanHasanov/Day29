@@ -1,11 +1,12 @@
 import 'package:day_29_vazifa/core/utils/colors.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
-import 'package:day_29_vazifa/feature/categoriesPage/widgets/categories_Item.dart';
-import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';
-import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';
+import 'package:day_29_vazifa/features/common/recipe_app_bar.dart';
+import 'package:day_29_vazifa/features/common/button_navigation_bar.dart';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../managers/categories_view_model.dart';
+
+import '../widgets/categories_Item.dart';
 
 class CategoriesPage extends StatelessWidget {
   const CategoriesPage({

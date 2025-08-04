@@ -1,7 +1,7 @@
 import 'package:day_29_vazifa/core/utils/colors.dart';
-import 'package:day_29_vazifa/feature/authentication/login_page/pages/app_bar_login.dart';
-import 'package:day_29_vazifa/feature/authentication/login_page/pages/recipe_login_container.dart';
-import 'package:day_29_vazifa/feature/authentication/login_page/widgets/text_form_field.dart';
+import 'package:day_29_vazifa/features/authentication/login_page/widgets/app_bar_login.dart';
+import 'package:day_29_vazifa/features/authentication/login_page/pages/recipe_login_container.dart';
+import 'package:day_29_vazifa/features/authentication/login_page/widgets/text_form_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,7 +1,7 @@
 import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:day_29_vazifa/core/utils/icons.dart';
 import 'package:day_29_vazifa/core/utils/styles.dart';
-import 'package:day_29_vazifa/feature/common/button/recipe_icon_button.dart';
+import 'package:day_29_vazifa/features/common/button/recipe_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
