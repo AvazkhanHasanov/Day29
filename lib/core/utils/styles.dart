@@ -1,4 +1,4 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +20,8 @@ class AppStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.pinkSubC,
     fontFamily: 'Poppins',
-  );  static final subtextRedPink = TextStyle(
+  );
+  static final subtextRedPink = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     color: AppColors.redPinkMain,
@@ -44,28 +45,42 @@ class AppStyles {
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',
     color: AppColors.color3E,
-  );  static final description = TextStyle(
+  );
+  static final description = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeight.w400,
     fontFamily: 'Poppins',
     color: AppColors.brownF9,
   );
-  static final paragraph= TextStyle(
+  static final paragraph = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w300,
     fontFamily: 'League',
     color: AppColors.brownF9,
   );
-  static final subtitle= TextStyle(
+  static final subtitle = TextStyle(
     fontSize: 15.sp,
     fontWeight: FontWeight.w500,
     fontFamily: 'Poppins',
     color: AppColors.pinkSubC,
-  );  static final titlle= TextStyle(
+  );
+  static final titlle = TextStyle(
     fontSize: 20.sp,
     fontWeight: FontWeight.w600,
     fontFamily: 'Poppins',
     color: AppColors.redPinkMain,
   );
+  static final oBText1 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.brownF9,
+    fontFamily: 'Poppins',
+  );
+  static final oBText2 = TextStyle(
+    fontSize: 13.sp,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Poppins',
+    color: AppColors.brownF9,
 
+  );
 }

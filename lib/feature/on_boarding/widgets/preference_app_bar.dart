@@ -1,10 +1,10 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
-import 'package:day_29_vazifa/core/utils/Icons.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
+import 'package:day_29_vazifa/core/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PreferenceAppBar extends StatelessWidget implements PreferredSizeWidget{
+class PreferenceAppBar extends StatelessWidget implements PreferredSizeWidget {
   const PreferenceAppBar({
     super.key,
   });
@@ -13,13 +13,15 @@ class PreferenceAppBar extends StatelessWidget implements PreferredSizeWidget{
   // TODO: implement preferredSize
   Size get preferredSize => Size(double.infinity, 56.h);
 
-
   @override
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
       centerTitle: true,
-      leading: SvgPicture.asset(AppIcons.backArrow),
+      leading: IconButton(
+        onPressed: () {},
+        icon: SvgPicture.asset(AppIcons.backArrow),
+      ),
       title: Container(
         alignment: Alignment.center,
         width: 230.w,
@@ -39,5 +41,4 @@ class PreferenceAppBar extends StatelessWidget implements PreferredSizeWidget{
       ),
     );
   }
-
- }
+}

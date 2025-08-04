@@ -1,7 +1,7 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
-import 'package:day_29_vazifa/core/utils/Icons.dart';
-import 'package:day_29_vazifa/core/utils/Images.dart';
-import 'package:day_29_vazifa/core/utils/Styles.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
+import 'package:day_29_vazifa/core/utils/icons.dart';
+import 'package:day_29_vazifa/core/utils/images.dart';
+import 'package:day_29_vazifa/core/utils/styles.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/detailPage/image_for_detail_page.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/detailPage/richtext_for_detail_page.dart';
 import 'package:day_29_vazifa/feature/common/button_navigation_bar.dart';

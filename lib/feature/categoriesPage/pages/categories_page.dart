@@ -1,4 +1,4 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/managers/categories_view_model.dart';
 import 'package:day_29_vazifa/feature/categoriesPage/widgets/categories_Item.dart';
 import 'package:day_29_vazifa/feature/common/recipe_app_bar.dart';

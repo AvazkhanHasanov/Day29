@@ -1,4 +1,4 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 
 class bottomGradient extends StatelessWidget {

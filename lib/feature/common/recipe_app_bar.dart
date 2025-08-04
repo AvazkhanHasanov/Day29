@@ -1,6 +1,6 @@
-import 'package:day_29_vazifa/core/utils/Colors.dart';
-import 'package:day_29_vazifa/core/utils/Icons.dart';
-import 'package:day_29_vazifa/core/utils/Styles.dart';
+import 'package:day_29_vazifa/core/utils/colors.dart';
+import 'package:day_29_vazifa/core/utils/icons.dart';
+import 'package:day_29_vazifa/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,7 +12,6 @@ class RecipeAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final String text;
-
   @override
   Size get preferredSize => Size(double.infinity, 56);
   @override
